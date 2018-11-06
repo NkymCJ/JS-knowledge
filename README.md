@@ -1,6 +1,6 @@
 # JS-knowledge
 
-easy JS knowledge
+一些简单的JS知识点
 
 ## Array
 
