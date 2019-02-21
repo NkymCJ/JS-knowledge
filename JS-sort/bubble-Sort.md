@@ -16,7 +16,7 @@
 
 以此类推，每一趟比较次数-1。
 
-![图示](/bubble-Sort.gif)
+![图示](bubble-Sort.gif)
 
 ### 示例: 
 ```
