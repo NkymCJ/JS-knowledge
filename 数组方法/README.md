@@ -1,8 +1,6 @@
-# JS-array
+数组方法
 
-一些简单的数组方法
-
-### 1. filter() - 迭代方法
+### filter() - 迭代方法
 
  > $(selector).filter(function(currentValue,index,arr), thisValue)
 
@@ -20,13 +18,14 @@
 示例：
 ```
 // 数组去重
-var arr = [1, 2, 3, 4, 2, 2, 2, 2, 2, 3, 4, 3, 4, 3, 1, 2];
+var arr = [2, "1", "2", "1", true, false, true, null, null, undefined, undefined];
 var result = arr.filter(function (currentValue, index, arr) {
-  return arr.indexOf(currentValue) === index;
+    return arr.indexOf(currentValue) === index;
 });
+console.log(result);
 ```
 
-### 2. some() - 迭代方法
+### some() - 迭代方法
 
  > $(selector).some(function(currentValue,index,arr), thisValue)
 
@@ -51,7 +50,7 @@ var result = arr.some(function (currentValue, index, arr) {
 console.log(result);
 ```
 
-### 3. every() - 迭代方法
+### every() - 迭代方法
 
  > $(selector).every(function(currentValue,index,arr), thisValue)
 
@@ -76,7 +75,7 @@ var result = arr.every(function (currentValue, index, arr) {
 console.log(result);
 ```
 
-### 4. map() - 迭代方法
+### map() - 迭代方法
 
  > $(selector).map(function(currentValue,index,arr), thisValue)
 
@@ -101,7 +100,7 @@ var result = arr.map(function(currentValue,index,arr){
 console.log(result);
 ```
 
-### 5. forEach() - 迭代方法
+### forEach() - 迭代方法
 
  > $(selector).forEach(function(currentValue,index,arr), thisValue)
 
@@ -121,12 +120,13 @@ console.log(result);
 // 创建新数组，新数组的每个元素为数组中的每个元素乘以100
 var arr = [1, 2, 3, 4, 2, 2, 2, 2, 2, 3, 4, 3, 4, 3, 1, 2];
 var result = arr.forEach(function (currentValue, index, arr) {
+  currentValue = currentValue * 100;
   console.log(index + ': ' + currentValue + '<br/>');
 });
 console.log(result);
 ```
 
-### 6. reduce() - 归并方法
+### reduce() - 归并方法
 
  > $(selector).reduce(function(total,currentValue,currentIndex,arr), initialValue)
 
