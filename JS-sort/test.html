@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            var arr = [84, 20, 29, 77, 5, 41, 100, 96, 90, 32,
+                52, 82, 100, 95, 77, 37, 12, 92, 9,
+                23, 13, 61, 27, 59, 78, 74, 35, 18, 20,
+                79, 44, 78, 64, 45, 58, 69, 3, 71, 87,
+                30, 36, 2, 98, 51, 91, 88, 98, 16, 1, 28
+            ];
+            var len = arr.length;
+            var minIndex, temp;
+            console.time("排序时间");
+            for (var i = 0; i < len - 1; i++) {
+                minIndex = i;
+                for (var j = i + 1; j < len; j++) {
+                    if (arr[minIndex] > arr[j]) {
+                        minIndex = j;
+                    }
+                }
+                temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
+            }
+            console.timeEnd("排序时间");
+            console.log('排序后：' + arr);
+        </script>
+        <script>
+            var arr = [84, 20, 29, 77, 5, 41, 100, 96, 90, 32,
+                52, 82, 100, 95, 77, 37, 12, 92, 9,
+                23, 13, 61, 27, 59, 78, 74, 35, 18, 20,
+                79, 44, 78, 64, 45, 58, 69, 3, 71, 87,
+                30, 36, 2, 98, 51, 91, 88, 98, 16, 1, 28
+            ];
+            console.time("排序时间");
+            for (var i = 1; i < arr.length; i++) {
+                var key = arr[i];
+                var j = i - 1;
+                while (arr[j] > key) {
+                    arr[j+1] = arr[j];
+                    j--;
+                }
+                arr[j+1] = key;
+            }
+            console.timeEnd("排序时间");
+            console.log('排序后：' + arr);
+        </script>
+    </body>
+
+</html>
